@@ -1,0 +1,14 @@
+{
+  "name": "workspace",
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "^1.4.7",
+    "bluebird": "^3.0.5",
+    "cookie": "^0.2.3",
+    "cookie-parser": "^1.4.0",
+    "express": "^4.13.3",
+    "hbs": "^4.0.0",
+    "md5": "^2.0.0",
+    "mongoose": "^4.2.4"
+  }
+}

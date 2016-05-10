@@ -1,31 +1,79 @@
-<!DOCTYPE html>
-<html ng-app>
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="utf-8" />
-    <title>{{title}}</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta content="" name="description" />
-    <meta content="" name="author" />
-    <script src="/script/angular.min.js"></script>
+{{> resourcesIndex}}
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>WeiChangBin-CMS</title>
+<meta name="keywords" content="H-ui.admin v2.3,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
+<meta name="description" content="H-ui.admin v2.3，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
 </head>
 <body>
-    <header class="h-head">
-
-    </header>
-    <aside style="float:left">
-        模板管理
-    </aside>
-    <section style="float:right">
-        <div>{{body}}</div>
-        <div>
-            <form action='/' method='post'>
-                <p><input type='file'/></p>
-                <p>模板名称<input type="text"/></p>
-
-            </form>    
+{{> top}}
+<aside class="Hui-aside">
+    <input runat="server" id="divScrollValue" type="hidden" value="" />
+    <div class="menu_dropdown bk_2">
+        <dl >
+            <dt>WCB－CMS</dt>
+        </dl>
+        <dl id="menu-article" >
+            <dt><i class="Hui-iconfont">&#xe616;</i> <a href="javascript:void(0)" _href="./menuctrl">栏目管理</a></dt>
+        </dl>
+        <dl id="menu-picture">
+            <dt><i class="Hui-iconfont">&#xe613;</i> 文章管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a _href="system-base.html" data-title="系统设置" href="javascript:void(0)">添加文章</a></li>
+                    <li><a _href="system-shielding.html" data-title="屏蔽词" href="javascript:void(0)">文章列表</a></li>
+                </ul>
+            </dd>
+        </dl>
+        
+        <dl id="menu-comments">
+            <dt><i class="Hui-iconfont">&#xe622;</i> 评论管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+        </dl>
+        <dl id="menu-system">
+            <dt><i class="Hui-iconfont">&#xe62e;</i> 模板管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+        </dl>
+        <dl id="menu-tongji">
+            <dt class=""><i class="Hui-iconfont">&#xe61a;</i> 系统设置<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd style="display: none;">
+                <ul>
+                    <li><a _href="charts-1.html" data-title="折线图" href="javascript:void(0)">折线图</a></li>
+                    <li><a _href="charts-2.html" data-title="时间轴折线图" href="javascript:void(0)">时间轴折线图</a></li>
+                    <li><a _href="charts-3.html" data-title="区域图" href="javascript:void(0)">区域图</a></li>
+                    <li><a _href="charts-4.html" data-title="柱状图" href="javascript:void(0)">柱状图</a></li>
+                    <li><a _href="charts-5.html" data-title="饼状图" href="javascript:void(0)">饼状图</a></li>
+                    <li><a _href="charts-6.html" data-title="3D柱状图" href="javascript:void(0)">3D柱状图</a></li>
+                    <li><a _href="charts-7.html" data-title="3D饼状图" href="javascript:void(0)">3D饼状图</a></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</aside>
+<div class="dislpayArrow"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+    <div id="Hui-tabNav" class="Hui-tabNav">
+        <div class="Hui-tabNav-wp">
+            <ul id="min_title_list" class="acrossTab cl">
+                <li class="active"><span title="我的桌面" data-href="welcome.html">我的桌面</span><em></em></li>
+            </ul>
         </div>
-    </section>
-</body>
+        <div class="Hui-tabNav-more btn-group"><a id="js-tabNav-prev" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d4;</i></a><a id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d7;</i></a></div>
+    </div>
+    <div id="iframe_box" class="Hui-article">
+        <div class="show_iframe">
+            <div style="display:none" class="loading"></div>
+            <iframe scrolling="yes" frameborder="0" src="./welcome"></iframe>
+        </div>
+    </div>
+</section>
 
+<script src="//st.haiziwang.com/static/pc/common/js/jquery.min.js"></script>
+<script type="text/javascript" src="/script/index.js"></script> 
+
+</body>
 </html>

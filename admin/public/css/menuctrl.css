@@ -1,0 +1,31 @@
+.select-box{
+	margin:0px 20px;
+}
+
+.btn-menu{
+	height:32px;
+	line-height: 32px
+}
+.menuctrlBody{
+	padding-top:20px;
+
+}
+.menuctrl_top{
+	padding-bottom:28px;
+	border-bottom: 1px dashed #ddd
+}
+
+.menuctrl-list dt,.menuctrl-list dd{
+	padding:15px 15px 5px 15px;
+}
+.menuctrl-list ul{
+	padding-left:20px;
+}
+.menuctrl-list dd{border-bottom:1px solid #ddd;}
+.menuctrl-list li{
+	padding-top:10px;
+	overflow: hidden;
+	clear:both;
+}
+.ly{float:left;}
+.lr{float:right;}

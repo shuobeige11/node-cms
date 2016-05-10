@@ -1,34 +1,51 @@
-var express=require('express');
-var router=express.Router();
-var opt=require('../controller/admin');
-var cookie=require('cookie');
-var md5=require('md5');
+const express = require('express'),
+    router = express.Router(),
+    opt = require('../controller/admin'),
+    cookie = require('cookie'),
+    md5 = require('md5'),
+    database = require('../config/database');
 
 
-router.get('/',function(req, res, next){
-	var mycookie=req.cookies;
-	if(mycookie.username==null || mycookie.password==null){
-		res.render('admin',{title:'login'})
-	}else{
-		res.redirect('/index')
-	}
+
+router.get('/', function(req, res, next) {
+    setTimeout(function() {
+        let modal = database.login;
+        return new Promise((resolve, reject) => {
+            modal.findOneAndUpdate(true, { identify: '' }, () => {});
+        })
+    }, 60000);
+    res.render('admin', { title: '我的操作台' });
+
 });
 
-router.get('/index',function(req,res){
-	res.render('index',{title:'index',body:'已经登录'})
+router.get('/index', function(req, res, next) {
+    res.render('index', { title: '我的操作台' });
 });
 
-router.post('/login',function(req, res){
-	var user=req.body.username,pwd=md5(req.body.password);
-	var mycookie=req.cookies;
-	if(user!=mycookie.username || pwd!=mycookie.password){
-		opt.login(req,res,user,pwd)
-	}
+router.get('/login', function(req, res, next) {
+    setTimeout(function() {
+        let modal = database.login;
+        return new Promise((resolve, reject) => {
+            modal.findOneAndUpdate(true, { identify: '' }, () => {});
+        })
+    }, 60000);
+    res.render('admin', { title: '我的操作台' });
 });
 
-router.post('/update',function(req, res){
-	var old=md5(req.body.oldpwd),news=md5(req.body.newpwd);
-	opt.updatepwd(req,res,old,news);
+
+router.get('/update', function(req, res, next) {
+    res.render('update', { title: 'update' })
 });
+
+
+router.get('/welcome', function(req, res, next) {
+    res.render('welcome');
+});
+
+router.get('/menuctrl', function(req, res, next) {
+    res.render('menuctrl')
+})
+
+
 
 module.exports = router;

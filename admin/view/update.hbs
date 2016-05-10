@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{admin}}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/H-ui.login.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="lib/Hui-iconfont/1.0.6/iconfont.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="loginWraper">
+  <div id="loginform" class="loginBox">
+
+    <div class="form form-horizontal" >
+        <div class="row cl">
+        <label class="form-label col-3"><i class="Hui-iconfont">旧密码</i></label>
+        <div class="formControls col-8">
+          <input name="oldpwd" id="oldpwd" type="password" placeholder="旧密码" class="input-text size-L">
+        </div>
+      </div>
+      <div class="row cl">
+        <label class="form-label col-3"><i class="Hui-iconfont">新密码</i></label>
+        <div class="formControls col-8">
+          <input name="newpwd" id="newpwd" type="password" placeholder="新密码" class="input-text size-L">
+        </div>
+      </div>
+      <div class="row cl">
+        <div class="formControls col-8 col-offset-3">
+          <input class="input-text size-L" type="text" style="width:150px;" name="identify" id="identify">
+          <img id="identifyImg"/> <a id="kanbuq" href="javascript:;">看不清，换一张</a> </div>
+      </div>
+      <div class="row">
+        <div class="formControls col-8 col-offset-3">
+           <a href='javascript:void(0)'  class="btn btn-success radius size-L">&nbsp;修&nbsp;&nbsp;&nbsp;&nbsp;改&nbsp;</a>
+        </div>
+      </div>
+      <div class="tiperror" ></div>
+   </div>
+ </div>
+  </div>  
+  <script src="//st.haiziwang.com/static/pc/common/js/jquery.min.js"></script>
+  <script src="script/lib/passport.js"></script>
+  <script type="text/javascript" src="/script/loginer/update.js"/></script>
+</body>
+
+</html>
